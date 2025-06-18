@@ -1,0 +1,129 @@
+/* General Meta Box Styling */
+.wppc-module-item, .wppc-link-item {
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+}
+
+.wppc-module-item .hndle, .wppc-link-item .hndle {
+    cursor: move;
+    font-size: 1em;
+    padding: 8px 12px;
+    margin:0;
+    line-height: 1.4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wppc-module-item .hndle span, .wppc-link-item .hndle span {
+    flex-grow: 1;
+}
+
+
+.wppc-module-item .inside, .wppc-link-item .inside {
+    padding: 12px;
+    margin:0;
+    line-height: 1.4;
+    /* display: none; /* Start collapsed if using JS toggle */
+}
+.wppc-module-item.closed .inside, .wppc-link-item.closed .inside {
+    display: none;
+}
+
+
+/* Sortable Placeholder */
+.wppc-sortable-placeholder {
+    border: 2px dashed #ccc;
+    background-color: #f0f0f0;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+/* Input fields */
+.wppc-module-item input[type="text"],
+.wppc-module-item input[type="number"],
+.wppc-module-item textarea,
+.wppc-link-item input[type="url"],
+.wppc-link-item textarea {
+    margin-bottom: 10px;
+}
+
+.wppc-module-item .wppc-module-title-input,
+.wppc-link-item .wppc-link-description-input {
+    font-weight: bold;
+}
+
+/* Buttons */
+#wppc-add-module, #wppc-add-link {
+    margin-top: 10px;
+}
+.wppc-remove-module, .wppc-remove-link {
+    color: #a00;
+    border-color: #a00;
+    background: #f1f1f1;
+    float: right; /* As per screenshot */
+}
+.wppc-remove-module:hover, .wppc-remove-link:hover {
+    color: #fff;
+    background: #a00;
+    border-color: #a00;
+}
+
+/* Module Preview Area */
+.wppc-module-preview-area iframe {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* For 16:9 videos */
+}
+
+/* WP Editor in metabox */
+.wppc-module-item .wp-editor-wrap {
+    margin-top: 5px;
+}
+
+/* Styling for the handle div similar to standard WordPress postboxes */
+.wppc-module-item .postbox-header .handlediv,
+.wppc-link-item .postbox-header .handlediv {
+    cursor: pointer;
+    width: 36px;
+    height: 36px; /* Ensure it's clickable */
+    display: block; /* Ensure it's clickable */
+    text-align: center;
+    padding: 0;
+}
+
+.wppc-module-item .postbox-header .handlediv .toggle-indicator::before,
+.wppc-link-item .postbox-header .handlediv .toggle-indicator::before {
+    content: "\f142"; /* Dashicon for collapse */
+    font: normal 20px/1 'dashicons';
+    display: inline-block;
+    vertical-align: top;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none !important;
+    padding: 8px 0; /* Center dashicon */
+}
+
+.wppc-module-item.closed .postbox-header .handlediv .toggle-indicator::before,
+.wppc-link-item.closed .postbox-header .handlediv .toggle-indicator::before {
+    content: "\f140"; /* Dashicon for expand */
+}
+
+/* Textarea to be replaced by wp_editor */
+.wppc-new-editor-placeholder {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    text-align: center;
+    cursor: pointer;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.wppc-new-editor-placeholder:hover {
+    border-color: #999;
+}

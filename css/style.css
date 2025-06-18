@@ -1,0 +1,98 @@
+/* --- WP Premium Content Frontend Styles --- */
+
+/* Single Premium Content Layout */
+.wppc-single-premium-content .post-thumbnail-wrapper {
+    margin-bottom: 20px; /* Example spacing */
+}
+
+.wppc-single-premium-content .post-thumbnail-wrapper img.attachment-premium-featured-image {
+    /* Styles for your custom-sized featured image */
+    width: 200px;  /* As per add_image_size */
+    height: 250px; /* As per add_image_size */
+    object-fit: cover; /* If you want to ensure it covers the dimensions */
+    margin-right: 20px;
+    margin-bottom: 10px;
+    float: left; /* Or use flexbox/grid on the container */
+    /* Add any other specific styles */
+}
+/* Clearfix for floated image if necessary */
+.wppc-single-premium-content .entry-content::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* Resource Links Section */
+.wppc-resource-links-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.wppc-section-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.wppc-resource-links-list {
+    list-style: disc;
+    margin-left: 20px;
+}
+.wppc-resource-links-list li {
+    margin-bottom: 8px;
+}
+
+/* Modules Section */
+.wppc-modules-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.wppc-modules-list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.wppc-module {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.wppc-module-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.wppc-module-content {
+    /* Styles for module content area */
+}
+.wppc-module-content iframe { /* Responsive iframes for videos */
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+
+.wppc-module-lock-message {
+    color: #777;
+    font-style: italic;
+    background-color: #fffddd;
+    border: 1px dashed #d8d8a0;
+    padding: 10px;
+}
+
+.wppc-login-required {
+    color: #c00;
+    font-weight: bold;
+    background-color: #ffe0e0;
+    border: 1px solid #c00;
+    padding: 15px;
+    text-align: center;
+}

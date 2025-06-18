@@ -1,0 +1,154 @@
+/* wp-content/plugins/wp-premium-content/css/wppc-frontend.css */
+
+/* --- Estilos Gerais para Conteúdo Premium --- */
+.wppc-single-premium-content {
+    /* Você pode adicionar margens ou preenchimentos gerais para a área do conteúdo premium aqui, se necessário */
+}
+
+/* Imagem Destacada */
+.wppc-single-premium-content .post-thumbnail-wrapper {
+    margin-bottom: 25px; /* Espaçamento abaixo da imagem */
+}
+
+.wppc-single-premium-content .post-thumbnail-wrapper img.attachment-premium-featured-image {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    margin-right: 20px; /* Margem à direita se flutuando */
+    margin-bottom: 10px; /* Margem inferior se flutuando */
+    float: left; /* Ou use flexbox/grid no container pai, se preferir */
+    /* Outros estilos específicos, se necessário */
+}
+
+/* Clearfix para o conteúdo principal se a imagem estiver flutuando */
+.wppc-single-premium-content .entry-content::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Títulos das Seções (Recursos Adicionais, Módulos do Curso) */
+.wppc-single-premium-content .wppc-section-title {
+    font-size: 1.8em; /* Ajuste este valor conforme sua preferência. Ex: 28px, 1.6rem */
+    margin-top: 40px;  /* Espaçamento acima do título da seção */
+    margin-bottom: 20px; /* Espaçamento abaixo do título da seção */
+    padding-bottom: 10px; /* Espaçamento interno abaixo, antes da borda */
+    border-bottom: 1px solid #e0e0e0; /* Linha divisória abaixo do título */
+    clear: both; /* Garante que o título não flutue ao lado da imagem destacada */
+}
+
+/* Seção de Links de Recursos Adicionais */
+.wppc-resource-links-section {
+    /* margin-top e border-top já estão no .wppc-section-title, se for o H2 */
+}
+
+.wppc-resource-links-list {
+    list-style: disc; /* Estilo de marcador padrão para links */
+    padding-left: 20px; /* Recuo para os marcadores */
+    margin-left: 0; /* Remove margem padrão da lista */
+}
+
+.wppc-resource-links-list li {
+    margin-bottom: 10px; /* Espaçamento entre os links */
+    padding-bottom: 5px;
+    /* border-bottom: 1px dashed #eee; */ /* Removido para simplificar, pode adicionar se gostar */
+}
+/*
+.wppc-resource-links-list li:last-child {
+    border-bottom: none;
+}
+*/
+
+.wppc-resource-links-list li a {
+    text-decoration: underline; /* Mantém o sublinhado padrão para links */
+    /* color: #0073aa; */ /* Cor padrão de links do WordPress, ou a cor do seu tema */
+}
+
+.wppc-resource-links-list li a:hover {
+    text-decoration: none; /* Remove sublinhado no hover, por exemplo */
+    /* color: #0a4b78; */ /* Cor de hover */
+}
+
+/* Seção de Módulos do Curso */
+.wppc-modules-section {
+    /* margin-top e border-top já estão no .wppc-section-title, se for o H2 */
+}
+
+.wppc-modules-list {
+    list-style: none; /* Remove marcadores padrão */
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.wppc-module {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+.wppc-module .wppc-module-title { /* Este é o H3 dentro de cada módulo */
+    font-size: 1.4em; /* Tamanho para o título de cada módulo */
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d0d0d0;
+    /* color: #333; */ /* Cor para o título do módulo */
+}
+
+.wppc-module .wppc-module-content {
+    /* Estilos para a área de conteúdo do módulo, se necessário */
+    line-height: 1.6;
+}
+
+.wppc-module .wppc-module-content iframe { /* Torna iframes (vídeos) responsivos */
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Para vídeos 16:9 */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Módulo Bloqueado */
+.wppc-module.wppc-module-locked {
+    background-color: #f0f0f0; /* Fundo ligeiramente diferente para bloqueado */
+    border-color: #dcdcdc;
+}
+
+.wppc-module.wppc-module-locked .wppc-module-title {
+    color: #777; /* Cor mais clara para o título de módulo bloqueado */
+    border-bottom-color: #e0e0e0;
+}
+
+.wppc-module .wppc-module-lock-message {
+    font-style: italic;
+    color: #555;
+    background-color: #fff9c4; /* Um amarelo claro para destaque */
+    border: 1px dashed #fbc02d;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+/* Aviso de Login Necessário */
+.wppc-single-premium-content .wppc-login-required {
+    background-color: #fff3cd; /* Amarelo de aviso */
+    color: #856404; /* Texto escuro para contraste */
+    border: 1px solid #ffeeba;
+    padding: 15px 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.wppc-single-premium-content .wppc-login-required a {
+    color: #664d03; /* Cor do link dentro do aviso */
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.wppc-single-premium-content .wppc-login-required a:hover {
+    text-decoration: none;
+}
